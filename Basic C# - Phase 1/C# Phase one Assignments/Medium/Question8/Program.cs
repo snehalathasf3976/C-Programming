@@ -6,10 +6,24 @@ class Program
     {
         System.Console.WriteLine("Enter the String");
         string string1 = Console.ReadLine();
+        string check = "";
         
-        for ( int i=0 ; i<string1.Length ; i++)
+        foreach(char value in string1)
         {
-
+            if(value >='0' && value <= '9')
+            {
+                check = check + value;
+            }
+        }
+        int number = int.Parse(check);
+        System.Console.WriteLine("Number is: "+number);
+        if(number % 2 ==0)
+        {
+            System.Console.WriteLine("Even Number");
+        }
+        else
+        {
+            System.Console.WriteLine("Odd Number");
         }
     }
 }
