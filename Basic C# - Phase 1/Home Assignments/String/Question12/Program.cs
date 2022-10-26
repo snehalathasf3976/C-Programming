@@ -6,8 +6,20 @@ class Program
     {
         System.Console.WriteLine("Enter the Main String: ");
         string mainString = Console.ReadLine();
-        char[] separators = new char[] { ' ' };
-        string[] subs = mainString.Split(separators);
-        int[] number = in
+        string[] number = mainString.Split(' ');
+        int max = 0 , min = 9 ;
+        for(int i=0 ; i<number.Length ; i++)
+        {
+            int temp = int.Parse(number[i]);
+            if(temp > max)
+            {
+                max = temp;
+            }
+            if(temp < min)
+            {
+                min = temp;
+            }
+        }
+        System.Console.WriteLine("Max is: "+max+" Min is: "+min);
     }
 }
